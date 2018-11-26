@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Insurance Claim System - Wallet</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+  </head>
+  <body>
+  	<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+    <img src="http://whitewatervethospital.com/clients/14061/images/HerdHealth.jpg" height="100%" width="100%"/>  
+	</div>	  
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Cow Chain System</h1>
+          <!-- <body style="background-color:skyblue"> -->
+          <!-- <body background="http://tupian.aladd.net/2017/11/6/nongchangweimeitupian3.jpg"> -->
+          <hr/>
+          <i><h3 class="text-center">The professional insurance claims certification platform</h3></i>
+          <!-- <h3 style="font-family:arial;color:red;font-size:10px;">The professional insurance claims certification platform</h3> -->
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4">
+          <!-- <div class="panel panel-default"> -->
+            <div class="panel-heading">
+              <!-- <h2 class="panel-title">Farmer port</h2> -->
+
+              <!-- <ul class="nav nav-tabs">
+              <li role="presentation" class="active"><a href="#">Farmer</a></li>
+              <li role="presentation"><a href="#">Veterinary</a></li>
+              <li role="presentation"><a href="#">TopDanmark</a></li>
+              </ul>
+ -->
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                  <a href="#home" data-toggle="tab">TopDanmark</a>
+                </li>
+                <li><a href="#vet" data-toggle="tab">Veterinary</a></li>
+                <li class="dropdown">
+                    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Farmer <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                        <li><a href="#jmeter" tabindex="-1" data-toggle="tab">Cow Register</a></li>
+                        <li><a href="#ejb" tabindex="-1" data-toggle="tab">Make Insurance Claim</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                    <font color="black"><h5>Pending issues:</h5></font>
+                    <span id="TOBEREPLY"></span> <br/><br/>
+                    <br/>
+                    <input type="text" class="form-control" id="CheckedId" placeholder="Request ID" />
+                    <select class="form-control" id = "Reply">
+                        <!-- <option value="0x4cB7618eb60CF1919b596F3Ab2fa18D50c19A775">Insurance Reply</option> -->
+                        <option value="0">Accept</option>
+                        <option value="1">Reject</option>
+                    </select>
+                    <br/>
+                    <center><button class="btn btn-primary" id="ReplyClaim" type="button" >Submit</button></center>
+                    <br/>
+
+                </div>
+                <div class="tab-pane fade" id="vet">
+                    <font color="black"><h5>Pending issues:</h5></font>
+                    <span id="TOBECHECK"></span> <br/><br/>
+                    <br/>
+                    <input type="text" class="form-control" id="RequestId" placeholder="Request ID" />
+
+                    <select class="form-control" id = "CHECK">
+                        <!-- <option value="0x4cB7618eb60CF1919b596F3Ab2fa18D50c19A775">Check Result</option> -->
+                        <option value="0">avoidable</option>
+                        <option value="1">inevitable</option>
+                    </select>
+                    <br/>
+                    <center><button class="btn btn-primary" id="CheckClaim" type="button" >Send the resualt</button></center>
+                </div>
+                <div class="tab-pane fade" id="jmeter">
+                      <br/>
+                      <!-- <font color="black"><h5><font color="white">&lowast;</font>Username:</h5></font> -->
+                      <input type="text" class="form-control" id="COW_ID" placeholder="Cow ID" />
+                      <br/>
+                      <input type="text" class="form-control" id="COWI_D" placeholder="Cow Birthday" />
+                      <br/>
+                      <center><button class="btn btn-primary" id="CheckClaim" type="button" >Make a claim</button></center>
+                </div>
+                <div class="tab-pane fade" id="ejb">
+                      <br/>
+                      <!-- <font color="black"><h5><font color="white">&lowast;</font>Username:</h5></font> -->
+                      <strong>Request history:</strong> <span id="Claimhistory"></span> <br/><br/>
+                      <input type="text" class="form-control" id="COWID" placeholder="Cow ID" />
+                      <br/>
+                      <select class="form-control" id = "TTTransferAddress">
+                        <option value="0x4cB7618eb60CF1919b596F3Ab2fa18D50c19A775">Claim Reason</option>
+                        <option value="0x21633660d960414A48cAFe6485bdF67d8b4B0e34">Sick</option>
+                        <option value="0xB3228Dfc3Ab50b3b24E344Bd7C8C371D712621C3">Death</option>
+                        <option value="0xB3228Dfc3Ab50b3b24E344Bd7C8C371D712621C3">Hurt</option>
+                        <option>...</option>
+                      </select>
+                      <br/>
+                      <center><button class="btn btn-primary" id="RegisterClaim" type="button" >Make a claim</button></center>
+                </div>
+            </div>
+
+
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

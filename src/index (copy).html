@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>TutorialToken - Wallet</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Insurance Claim</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4">
+          
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Farmer's view</h3>
+            </div>
+            <div class="panel-body">
+              <h4>Cow Register</h4>
+              <strong>Request history:</strong> <span id="Claimhistory"></span> x_x <br/><br/>
+              <h4>Input</h4>
+              <input type="text" class="form-control" id="COWID" placeholder="CowId" />
+              <!-- <input type="text" class="form-control" id="InitDate" placeholder="Initial Date" /> -->
+              
+              <button class="btn btn-primary" id="RegisterClaim" type="button">Register</button>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Vet's view</h3>
+            </div>
+            <div class="panel-body">
+              <h4>Claim Check</h4>
+              <strong>Request Lists:</strong> <span id="TOBECHECK"></span> ^_^ <br/><br/>
+              <h4>Input</h4>
+              <input type="text" class="form-control" id="RequestId" placeholder="RequestId" />
+              <!-- <input type="text" class="form-control" id="DATE" placeholder="date" /> -->
+              <!-- <input type="text" class="form-control" id="TTTransferAddress" placeholder="Address" /> -->
+              <select class="form-control" id = "CHECK">
+                <option value="0">avoidable</option>
+                <option value="1">inevitable</option>
+              </select>
+              <!-- <input type="text" class="form-control" id="TTTransferAmount" placeholder="Amount" /> -->
+              <button class="btn btn-primary" id="CheckClaim" type="button">Check Claim</button>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Insurance's view</h3>
+            </div>
+            <div class="panel-body">
+              <h4>Claim Reply</h4>
+              <strong>Request Lists:</strong> <span id="TOBEREPLY"></span> ^_^ <br/><br/>
+              <h4>Input</h4>
+              <input type="text" class="form-control" id="RequestId" placeholder="RequestId" />
+              <!-- <input type="text" class="form-control" id="DATE" placeholder="date" /> -->
+              <!-- <input type="text" class="form-control" id="TTTransferAddress" placeholder="Address" /> -->
+              <select class="form-control" id = "Reply">
+                <option value="0">accept</option>
+                <option value="1">reject</option>
+              </select>
+              <!-- <input type="text" class="form-control" id="TTTransferAmount" placeholder="Amount" /> -->
+              <button class="btn btn-primary" id="ReplyClaim" type="button">Reply Claim</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
